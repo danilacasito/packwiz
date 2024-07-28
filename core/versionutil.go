@@ -54,6 +54,11 @@ var ModLoaders = map[string]ModLoaderComponent{
 	"neoforge": {
 		Name:              "neoforge",
 		FriendlyName:      "NeoForge",
+		VersionListGetter: FetchMavenVersionPrefixedList("https://maven.neoforged.net/releases/net/neoforged/neoforge/maven-metadata.xml", "NeoForge"),
+	},
+	"neoforge-1.20.1": {
+		Name: "neoforge-1.20.1",
+		FriendlyName: "NeoForge 1.20.1",
 		VersionListGetter: FetchMavenVersionPrefixedListStrip("https://maven.neoforged.net/releases/net/neoforged/forge/maven-metadata.xml", "NeoForge"),
 	},
 }
